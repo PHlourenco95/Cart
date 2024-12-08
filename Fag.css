@@ -1,0 +1,129 @@
+
+body{
+   background: #ffffff; 
+}
+ 
+main{
+    display: grid;
+}
+.alinhar{
+    height: 100vh;
+    display: grid; /* impede que a div invada o header */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.perguntas-frequentes{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+
+
+}
+
+
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    
+
+}
+
+ .titulo h1{
+    font-size: 3rem;
+   padding-top: 60px;
+}
+
+.faq{
+     width: 100%;
+     list-style: none;
+     
+
+}
+
+.faq li{
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.faq li label{
+    padding: 15px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgba(76, 90, 85, 0.856);
+    display: flex;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.faq li label span{
+    display: inline-block;
+    padding: 7px;
+    background-color: #858585;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-right: 10px;
+    align-items: center;
+    cursor: pointer;
+
+
+}
+
+.faq input[type=radio]{
+    display: none;
+    
+}
+
+.faq .resposta{
+    color: #302e29;
+    padding: 0px 15px; ;
+    background-color: #ffffff;
+    line-height: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease, padding .5s ease   ;
+}
+
+.faq input[type=radio]:checked + label + .resposta{
+    max-height:400px ;
+    padding: 10px 15px;
+    overflow: hidden;
+
+}
+
+.faq li label::before{
+    content: '+';
+    margin-right: 13px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.faq input[type=radio]:checked + label::before{
+    content: '-';
+}
+
+
+/*butao para subir
+.scroll-top {
+    position: fixed;
+    bottom: 2.2rem;
+    right: 2.2rem;
+  }
+  .scroll-top i {
+    padding: 8px;
+    font-size: 1.4rem;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 5rem;
+    
+  }*/
